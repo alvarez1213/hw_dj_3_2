@@ -8,7 +8,7 @@ def index(request):
 def books_view(request):
     context = Book.objects.all()
     template = 'books/books_list.html'
-    return render(request, template, {'books': context, 'pagination': True})
+    return render(request, template, {'books': context, 'pagination': False})
 
 def books_view_filter(request, pub_date):
     context = get_list_or_404(Book, pub_date=pub_date)

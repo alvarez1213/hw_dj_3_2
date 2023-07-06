@@ -10,7 +10,7 @@
         <div class="row">
             {% for book in books %}
                 <div class="book col-md-4">
-                    <h2><a href="/books">{{ book.name }}</a></h2>
+                    <h2><a href="/books/{{ book.pub_date|date:"Y-m-d" }}">{{ book.name }}</a></h2>
                     <p>Автор: {{ book.author }}</p>
                     <p>Дата публикации: {{ book.pub_date }}</p>
                 </div>
